@@ -379,7 +379,7 @@ def redash_fetch_rows(
     results_url = f"{base_url}/api/queries/{query_id}/results"
 
     last_exc = None
-
+    
     if do_refresh:
         for _ in range(max_retries):
             try:
@@ -393,7 +393,7 @@ def redash_fetch_rows(
 
         # pequeña espera para que materialice
         time.sleep(refresh_wait_s)
-
+    
     for _ in range(max_retries):
         try:
             r = sess.get(results_url, headers=headers, timeout=timeout)

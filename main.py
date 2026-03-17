@@ -15,8 +15,8 @@ AUTH = "Basic NTEzMTQyNTp4bVJpTHNNMEVKbGhkV2dfbC00VWxTUzhVNmd1eDVIQw=="
 TOLERANCIA_TARDANZA_SEG = 0
 TOLERANCIA_RETIRO_SEG  = 0
 
-START_DATE = "2025-11-15"
-END_DATE   = "2025-12-15"
+START_DATE = "2026-01-01"
+END_DATE   = "2026-01-14"
 
 LIMIT_USERS = 50
 LIMIT_DAYS  = 500
@@ -461,7 +461,7 @@ def main():
     rows_perm = redash_fetch_rows(
         query_id=20036,
         api_key="tIuuysHOXHdN7WArCwGAFrJ9byyZrfBuY4svmMtS",
-        do_refresh=True,
+        do_refresh=False,
         refresh_wait_s=2.0,
         max_retries=3,
         timeout=30
